@@ -1,6 +1,6 @@
 #!/bin/bash
 DIR="/opt/axlg"
-TESTFILE_DIR="$AXLG_DIR/testfile"
+TESTFILE_DIR="$DIR/static/testfile"
 if [ ! -d "$TESTFILE_DIR" ]; then
   mkdir -p "$TESTFILE_DIR" || { echo "Error creating directory" >&2; exit 1; }
 fi

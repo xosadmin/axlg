@@ -60,7 +60,7 @@ def process(type,value):
             result = "Invalid IP Address"
     else:
         result = "Invalid Action."
-    return result
+    return f"<pre>{result}</pre>"
 
 @app.route("/robots.txt")
 def robots():
