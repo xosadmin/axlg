@@ -19,7 +19,7 @@ WORKDIR /opt/axlg
 
 RUN rm -rf .git
 
-RUN pip3 -r install requirements.txt --break-system-packages
+RUN pip3 install -r requirements.txt --break-system-packages
 
 EXPOSE 5000
 
