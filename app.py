@@ -2,6 +2,7 @@ import os,subprocess
 from flask import *
 from utils import *
 from conf import sysconfig
+from init import testFileGen
 
 app = Flask(__name__)
 

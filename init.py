@@ -29,27 +29,11 @@ def testFileGen():
     if not os.path.exists(absLocation):
         os.makedirs(absLocation)
     for item in testFileSize:
-        print(f"Generating {item}MB.test")
-        filename = os.path.join(absLocation, f"{item}MB.test")
-        with open(filename, 'wb') as f:
-            f.write(bytearray(int(item) * 1024 * 1024))
+        if not os.path.exist(os.path.join("testfile",f"{item}MB.test")):
+            print(f"Generating {item}MB.test")
+            filename = os.path.join(absLocation, f"{item}MB.test")
+            with open(filename, 'wb') as f:
+                f.write(bytearray(int(item) * 1024 * 1024))
+        else:
+            print(f"{item}MB.test file exists. Skipping...")
     return True
-
-os_sys = detectSys().lower()
-if os_sys != "unknown":
-    initdep = initDependRun()
-    if initdep:
-        testFileGen()
-        print("Complete.")
-    else:
-        for item in initdep:
-            if os_sys == "centos" or os_sys == "fedora" or os_sys == "almalinux" or os_sys == "rockylinux":
-                runCommand(["yum","-y","install",item])
-            elif os_sys == "ubuntu" or os_sys == "debian":
-                runCommand(["apt","-y","install",item])
-            else:
-                print("Cannot find suitable installation method(s). Exiting...")
-                exit(1)
-else:
-    print("Unsupported OS. Exiting...")
-    exit(1)
