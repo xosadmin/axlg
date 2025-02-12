@@ -7,6 +7,7 @@ function copycontent(flag) {
 
 function doActions(type) {
     var value = document.getElementById("dstaddr").value;
+    document.getElementById("lgResult").style.display = "none";
     const Http = new XMLHttpRequest();
     const url='/process/' + type + "/" + value;
     Http.open("GET", url);
