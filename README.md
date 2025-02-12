@@ -10,5 +10,7 @@ AX Looking Glass Server - A simple looking glass server
 3. Update ``conf.py`` with your hostname, location and iperf3, etc.  
 4. Use Flask Engine or any WSGI engine (e.g. uWSGI and Gunicorn) to run this project  
   
-Note: AXLG does not support other platforms like Windows.  
+Notes:   
+- AXLG does not support other platforms like Windows.
+- You can pass your own ``conf.py`` to ``/opt/axlg/conf.py`` to adopt custom config.  
   
