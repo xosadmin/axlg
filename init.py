@@ -15,8 +15,7 @@ def initDependRun():
     dependencies = ["ping","traceroute","mtr"]
     notFoundDepends = []
     for item in dependencies:
-        result = runCommand([item])
-        if result == "Error: Command not found":
+        if not os.path.exists(f"/bin/{item}") and not os.path.exists(f"/usr/sbin/{item}"):
             notFoundDepends.append(item)
     if len(notFoundDepends) > 0:
         print(f"Error: Dependency {notFoundDepends} not satisfied.")
