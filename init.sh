@@ -22,6 +22,8 @@ create_test_file 1000 1000mb.test
 
 cd "$DIR" || { echo "Error changing directory" >&2; exit 1; }
 
+git stash push -u -m "conf.py stash"
 git pull
+git stash pop
 
 uwsgi --http :5000 --wsgi-file app.py --callable app || { echo "Error starting uwsgi" >&2; exit 1; }
