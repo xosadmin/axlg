@@ -6,6 +6,7 @@ RUN apt update -y --fix-missing && apt install -y \
     mtr \
     curl \
     net-tools \
+    gcc \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
