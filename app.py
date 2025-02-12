@@ -27,7 +27,7 @@ def homepage():
                            siteTitle=siteTitle,
                            hostname=hostname,
                            userIP=userIP,
-                           asn=asnisp,
+                           asnisp=asnisp,
                            srvipv4=srvip4,
                            srvipv6=srvip6,
                            iperf3=iperf3,
