@@ -5,7 +5,7 @@ import ipaddress
 def runCommand(command):
     try:
         result = subprocess.run(command, text=True, capture_output=True, check=True)
-        return result.stdout
+        return "\n".join(result.stdout.splitlines())
     except subprocess.CalledProcessError as e:
         return f"Error: {e.stderr}"
     except FileNotFoundError:
