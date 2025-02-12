@@ -24,4 +24,4 @@ RUN pip3 install -r requirements.txt --break-system-packages
 
 EXPOSE 5000
 
-CMD ["/etc/init.sh"]
+CMD ["/init.sh"]
