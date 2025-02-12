@@ -60,7 +60,7 @@ def process(type,value):
             result = "Invalid IP Address"
     else:
         result = "Invalid Action."
-    return jsonify({"Output": result})
+    return result
 
 @app.route("/robots.txt")
 def robots():
