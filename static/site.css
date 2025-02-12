@@ -1,0 +1,26 @@
+a {
+    text-decoration: none;
+}
+
+small {
+    color: gray;
+    font-size: 10pt;
+}
+
+#dstaddr {
+    width: 40%;
+}
+
+#lgResult {
+    border-radius: 25px;
+}
+
+#lgResult {
+    opacity: 85%;
+    display: none;
+}
+
+#footer > p {
+    text-align: center;
+    font-size: 10pt;
+}
