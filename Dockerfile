@@ -7,6 +7,7 @@ RUN apt update -y --fix-missing && apt install -y \
     curl \
     net-tools \
     gcc \
+    iputils-ping \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
