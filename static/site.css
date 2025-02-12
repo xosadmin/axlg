@@ -2,6 +2,10 @@ a {
     text-decoration: none;
 }
 
+body {
+    background-color: rgb(250,250,250);
+}
+
 small {
     color: gray;
     font-size: 10pt;
@@ -15,6 +19,14 @@ small {
     border-radius: 25px;
 }
 
+#inputWarn {
+    display: none;
+}
+
+#inputWarn > p {
+    color: red;
+}
+
 #lgResult {
     opacity: 85%;
     display: none;
@@ -22,5 +34,5 @@ small {
 
 #footer > p {
     text-align: center;
-    font-size: 10pt;
+    font-size: 11pt;
 }
