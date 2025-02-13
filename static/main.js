@@ -1,7 +1,7 @@
 function copycontent(flag) {
     var copyText = document.getElementById(flag);
     copyText.select();
-    document.execCommand("Copy");
+    document.execCommand("copy");
     alert("IP Address Copied");
 }
 
@@ -20,7 +20,7 @@ function doActions(type) {
         Http.send();
         Http.onreadystatechange = (e) => {
             if (Http.readyState === 4 && Http.status === 200) {
-                document.getElementById("lgResult").innerHTML = Http.responseText;
+                document.getElementById("lgResult").innerHTML = "<p># " + type + " " + value +"</p>" + Http.responseText;
                 document.getElementById("lgResult").style.display = "block";
             }
         }
