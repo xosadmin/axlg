@@ -15,9 +15,11 @@ create_test_file() {
   fi
 }
 
-create_test_file 10 10mb.test
-create_test_file 100 100mb.test
-create_test_file 1000 1000mb.test
+if [[ ! -f "${TESTFILE_DIR}/10mb.test"]]; then
+  create_test_file 10 10mb.test
+  create_test_file 100 100mb.test
+  create_test_file 1000 1000mb.test
+fi
 
 cd "$DIR" || { echo "Error changing directory" >&2; exit 1; }
 
