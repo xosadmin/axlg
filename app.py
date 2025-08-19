@@ -11,7 +11,7 @@ def getIP():
     ipaddr = request.headers.get("CF-Connecting-IP")
     if not ipaddr:
         ipaddr = request.remote_addr
-    return ipaddr
+    return ipaddr[0]
 
 @app.route("/")
 def homepage():
