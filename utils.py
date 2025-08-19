@@ -15,7 +15,9 @@ def readIP64():
     endpoint = "https://ip.7m7.net"
     ipv4 = runCommand(['curl', '-4', endpoint, '--insecure']).strip()
     ipv6 = runCommand(['curl', '-6', endpoint, '--insecure']).strip()
-    if "Couldn't connect to server" in ipv6:
+    if not validIP(ipv4):
+        ipv4 = "Not available"
+    if not validIP(ipv6):
         ipv6 = "Not available"
     return ipv4, ipv6
 
@@ -48,7 +50,7 @@ def ip2asn(ipaddr):
             isp = contents.get("org","Unknown")
             return str(isp)
         else:
-            isp = "Cannot retrieve information."
+            isp = "Cannot retrieve information"
     else:
         isp = "Local Address"
     return str(isp)
