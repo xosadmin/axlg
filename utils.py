@@ -50,7 +50,7 @@ def ip2asn(ipaddr):
         else:
             isp = "Cannot retrieve information."
     else:
-        isp = "AS65530 Local Address"
+        isp = "Local Address"
     return str(isp)
 
 def ping(dst,time):
