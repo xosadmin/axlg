@@ -10,8 +10,10 @@ siteTitle = sysconfig["siteTitle"]
 def getIP():
     ipaddr = request.headers.get("CF-Connecting-IP")
     if not ipaddr:
-        ipaddr = request.remote_addr
-    return ipaddr[0]
+        ipaddrReturn = request.remote_addr
+    if "," in ipaddrReturn:
+        ipaddrReturn = ipaddrReturn.split(",")[0]
+    return ipaddrReturn
 
 @app.route("/")
 def homepage():
