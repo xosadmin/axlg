@@ -1,4 +1,4 @@
-FROM python:slim-bookworm
+FROM python:slim-trixie
 
 RUN apt update -y --fix-missing && apt install -y \
     git \
