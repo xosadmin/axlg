@@ -12,7 +12,7 @@ def runCommand(command):
         return "Error: Command not found"
 
 def readIP64():
-    endpoint = "https://showip.7m7.net"
+    endpoint = "https://ip.7m7.net"
     ipv4 = runCommand(['curl', '-4', endpoint, '--insecure']).strip()
     ipv6 = runCommand(['curl', '-6', endpoint, '--insecure']).strip()
     if "Couldn't connect to server" in ipv6:
