@@ -43,7 +43,7 @@ def process(type,value):
             result = ping(value,sysconfig["pingtime"])
         else:
             result = "Invalid IP Address"
-    elif type == "tracert":
+    elif type == "traceroute":
         if validIP(value):
             result = tracert(value)
         else:
