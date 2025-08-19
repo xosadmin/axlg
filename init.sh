@@ -37,6 +37,10 @@ if [[ -n "$siteTitle" ]]; then
     *) discouragesearches=False ;;
   esac
 
+  if [[ -z "$location" ]]; then
+    location="Unknown"
+  fi
+
   cat > conf.py <<EOF
 sysconfig = {
     "siteTitle": "${siteTitle}",
